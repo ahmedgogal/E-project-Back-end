@@ -17,4 +17,4 @@ router
     .put(updateCategory)
     .delete(deleteCategory);
 
-module.exports = router; 1
+module.exports = router;
