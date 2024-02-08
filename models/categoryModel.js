@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 // 1- Create Schema
 const categorySchema = new mongoose.Schema(
     {
@@ -10,7 +9,7 @@ const categorySchema = new mongoose.Schema(
             minlength: [3, 'Too short category name'],
             maxlength: [32, 'Too long category name'],
         },
-
+        // A and B => shoping.com/a-and-b
         slug: {
             type: String,
             lowercase: true,
