@@ -1,11 +1,12 @@
 {
-    "separators.enabledSymbols": [
-        "Classes",
-        "Enums",
-        "Functions",
-        "Interfaces",
-        "Methods",
-        "Namespaces",
-        "Structs"
-    ]
+  "separators.enabledSymbols": [
+    "Classes",
+    "Enums",
+    "Functions",
+    "Interfaces",
+    "Methods",
+    "Namespaces",
+    "Structs"
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
