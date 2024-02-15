@@ -49,11 +49,7 @@ class ApiFeatures {
       } else  {
 =======
       } else {
-<<<<<<< HEAD
->>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
-=======
->>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
-        query = { name: { $regex: this.queryString.keyword, $options: 'i' } };
+        query = { name: { $regex: this.queryString.keyword, $options: "i" } };
       }
 
       this.mongooseQuery = this.mongooseQuery.find(query);

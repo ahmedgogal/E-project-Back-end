@@ -69,16 +69,8 @@ const productSchema = new mongoose.Schema(
       default: 0,
     },
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
   {
     timestamps: true,
-=======
-  { timestamps: true,
->>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
-=======
-  { timestamps: true,
->>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
     // to enable virtual populate
     toJSON: { virtuals: true },
     toObject: { virtuals: true },

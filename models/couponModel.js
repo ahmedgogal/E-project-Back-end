@@ -20,12 +20,4 @@ const couponSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 module.exports = mongoose.model('Coupon', couponSchema);
-=======
-module.exports = mongoose.model('Coupon', couponSchema);
->>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
-=======
-module.exports = mongoose.model('Coupon', couponSchema);
->>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f

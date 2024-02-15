@@ -11,14 +11,10 @@ const ApiError = require('./utils/apiError');
 const globalError = require('./middlewares/errorMiddleware');
 const dbConnection = require('./config/database');
 // Routes
-const mountRoutes = require('./routes');
-<<<<<<< HEAD
-<<<<<<< HEAD
-const { webhookCheckout } = require('./services/orderService');
-=======
->>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
-=======
->>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
+const categoryRoute = require('./routes/categoryRoute');
+const subCategoryRoute = require('./routes/subCategoryRoute');
+const brandRoute = require('./routes/brandRoute');
+const productRoute = require('./routes/productRoute');
 
 // Connect with db
 dbConnection();
