@@ -1,6 +1,7 @@
 const express = require('express');
 const {
 <<<<<<< HEAD
+<<<<<<< HEAD
   getUserValidator,
   createUserValidator,
   updateUserValidator,
@@ -23,6 +24,8 @@ const {
   updateLoggedUserData,
   deleteLoggedUserData,
 =======
+=======
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
     getUserValidator,
     createUserValidator,
     updateUserValidator,
@@ -44,6 +47,9 @@ const {
     updateLoggedUserPassword,
     updateLoggedUserData,
     deleteLoggedUserData,
+<<<<<<< HEAD
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
+=======
 >>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
 } = require('../services/userService');
 
@@ -62,6 +68,7 @@ router.delete('/deleteMe', deleteLoggedUserData);
 router.use(authService.allowedTo('admin', 'manager'));
 router.put(
 <<<<<<< HEAD
+<<<<<<< HEAD
   '/changePassword/:id',
   changeUserPasswordValidator,
   changeUserPassword
@@ -76,6 +83,8 @@ router
   .put(uploadUserImage, resizeImage, updateUserValidator, updateUser)
   .delete(deleteUserValidator, deleteUser);
 =======
+=======
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
     '/changePassword/:id',
     changeUserPasswordValidator,
     changeUserPassword
@@ -89,6 +98,9 @@ router
     .get(getUserValidator, getUser)
     .put(uploadUserImage, resizeImage, updateUserValidator, updateUser)
     .delete(deleteUserValidator, deleteUser);
+<<<<<<< HEAD
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
+=======
 >>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
 
 module.exports = router;

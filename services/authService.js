@@ -15,6 +15,7 @@ const User = require('../models/userModel');
 // @access  Public
 exports.signup = asyncHandler(async (req, res, next) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   // 1- Create user
   const user = await User.create({
     name: req.body.name,
@@ -27,6 +28,8 @@ exports.signup = asyncHandler(async (req, res, next) => {
 
   res.status(201).json({ data: user, token });
 =======
+=======
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
     // 1- Create user
     const user = await User.create({
         name: req.body.name,
@@ -38,6 +41,9 @@ exports.signup = asyncHandler(async (req, res, next) => {
     const token = createToken(user._id);
 
     res.status(201).json({ data: user, token });
+<<<<<<< HEAD
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
+=======
 >>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
 });
 
@@ -45,6 +51,7 @@ exports.signup = asyncHandler(async (req, res, next) => {
 // @route   GET /api/v1/auth/login
 // @access  Public
 exports.login = asyncHandler(async (req, res, next) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
   // 1) check if password and email in the body (validation)
   // 2) check if user exist & check if password is correct
@@ -61,6 +68,8 @@ exports.login = asyncHandler(async (req, res, next) => {
   // 4) send response to client side
   res.status(200).json({ data: user, token });
 =======
+=======
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
     // 1) check if password and email in the body (validation)
     // 2) check if user exist & check if password is correct
     const user = await User.findOne({ email: req.body.email });
@@ -75,11 +84,15 @@ exports.login = asyncHandler(async (req, res, next) => {
     delete user._doc.password;
     // 4) send response to client side
     res.status(200).json({ data: user, token });
+<<<<<<< HEAD
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
+=======
 >>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
 });
 
 // @desc   make sure the user is logged in
 exports.protect = asyncHandler(async (req, res, next) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
   // 1) Check if token exist, if exist get
   let token;
@@ -132,6 +145,8 @@ exports.protect = asyncHandler(async (req, res, next) => {
   req.user = currentUser;
   next();
 =======
+=======
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
     // 1) Check if token exist, if exist get
     let token;
     if (
@@ -182,12 +197,16 @@ exports.protect = asyncHandler(async (req, res, next) => {
 
     req.user = currentUser;
     next();
+<<<<<<< HEAD
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
+=======
 >>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
 });
 
 // @desc    Authorization (User Permissions)
 // ["admin", "manager"]
 exports.allowedTo = (...roles) =>
+<<<<<<< HEAD
 <<<<<<< HEAD
   asyncHandler(async (req, res, next) => {
     // 1) access roles
@@ -200,6 +219,8 @@ exports.allowedTo = (...roles) =>
     next();
   });
 =======
+=======
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
     asyncHandler(async (req, res, next) => {
         // 1) access roles
         // 2) access registered user (req.user.role)
@@ -210,12 +231,16 @@ exports.allowedTo = (...roles) =>
         }
         next();
     });
+<<<<<<< HEAD
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
+=======
 >>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
 
 // @desc    Forgot password
 // @route   POST /api/v1/auth/forgotPassword
 // @access  Public
 exports.forgotPassword = asyncHandler(async (req, res, next) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
   // 1) Get user by email
   const user = await User.findOne({ email: req.body.email });
@@ -260,6 +285,8 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
     .status(200)
     .json({ status: 'Success', message: 'Reset code sent to email' });
 =======
+=======
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
     // 1) Get user by email
     const user = await User.findOne({ email: req.body.email });
     if (!user) {
@@ -302,6 +329,9 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
     res
         .status(200)
         .json({ status: 'Success', message: 'Reset code sent to email' });
+<<<<<<< HEAD
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
+=======
 >>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
 });
 
@@ -309,6 +339,7 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
 // @route   POST /api/v1/auth/verifyResetCode
 // @access  Public
 exports.verifyPassResetCode = asyncHandler(async (req, res, next) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
   // 1) Get user based on reset code
   const hashedResetCode = crypto
@@ -332,6 +363,8 @@ exports.verifyPassResetCode = asyncHandler(async (req, res, next) => {
     status: 'Success',
   });
 =======
+=======
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
     // 1) Get user based on reset code
     const hashedResetCode = crypto
         .createHash('sha256')
@@ -353,6 +386,9 @@ exports.verifyPassResetCode = asyncHandler(async (req, res, next) => {
     res.status(200).json({
         status: 'Success',
     });
+<<<<<<< HEAD
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
+=======
 >>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
 });
 
@@ -360,6 +396,7 @@ exports.verifyPassResetCode = asyncHandler(async (req, res, next) => {
 // @route   POST /api/v1/auth/resetPassword
 // @access  Public
 exports.resetPassword = asyncHandler(async (req, res, next) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
   // 1) Get user based on email
   const user = await User.findOne({ email: req.body.email });
@@ -385,6 +422,8 @@ exports.resetPassword = asyncHandler(async (req, res, next) => {
   const token = createToken(user._id);
   res.status(200).json({ token });
 =======
+=======
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
     // 1) Get user based on email
     const user = await User.findOne({ email: req.body.email });
     if (!user) {
@@ -408,5 +447,8 @@ exports.resetPassword = asyncHandler(async (req, res, next) => {
     // 3) if everything is ok, generate token
     const token = createToken(user._id);
     res.status(200).json({ token });
+<<<<<<< HEAD
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
+=======
 >>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
 });

@@ -3,6 +3,7 @@ const nodemailer = require('nodemailer');
 // Nodemailer
 const sendEmail = async (options) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   // 1) Create transporter ( service that will send email like "gmail","Mailgun", "mialtrap", sendGrid)
   const transporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST,
@@ -25,6 +26,8 @@ const sendEmail = async (options) => {
   // 3) Send email
   await transporter.sendMail(mailOpts);
 =======
+=======
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
     // 1) Create transporter ( service that will send email like "gmail","Mailgun", "mialtrap", sendGrid)
     const transporter = nodemailer.createTransport({
         host: process.env.EMAIL_HOST,
@@ -46,6 +49,9 @@ const sendEmail = async (options) => {
 
     // 3) Send email
     await transporter.sendMail(mailOpts);
+<<<<<<< HEAD
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
+=======
 >>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
 };
 

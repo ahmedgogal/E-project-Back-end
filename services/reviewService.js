@@ -5,6 +5,7 @@ const Review = require('../models/reviewModel');
 // GET /api/v1/products/:productId/reviews
 exports.createFilterObj = (req, res, next) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   let filterObject = {};
   if (req.params.productId) filterObject = { product: req.params.productId };
   req.filterObj = filterObject;
@@ -14,6 +15,8 @@ exports.createFilterObj = (req, res, next) => {
 // @desc    Get list of reviews
 // @route   GET /api/v1/reviews
 =======
+=======
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
     let filterObject = {};
     if (req.params.productId) filterObject = { product: req.params.productId };
     req.filterObj = filterObject;
@@ -22,6 +25,9 @@ exports.createFilterObj = (req, res, next) => {
 
 // @desc    Get list of Reviewss
 // @route   GET /api/v1/Review
+<<<<<<< HEAD
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
+=======
 >>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
 // @access  Public
 exports.getReviews = factory.getAll(Review);
@@ -34,16 +40,22 @@ exports.getReview = factory.getOne(Review);
 // Nested route (Create)
 exports.setProductIdAndUserIdToBody = (req, res, next) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (!req.body.product) req.body.product = req.params.productId;
   if (!req.body.user) req.body.user = req.user._id;
   next();
 };
 =======
+=======
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
     if (!req.body.product) req.body.product = req.params.productId;
     if (!req.body.user) req.body.user = req.user._id;
     next();
   };
   
+<<<<<<< HEAD
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
+=======
 >>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
 // @desc    Create review
 // @route   POST  /api/v1/reviews

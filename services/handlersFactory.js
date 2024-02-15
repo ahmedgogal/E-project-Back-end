@@ -11,8 +11,12 @@ exports.deleteOne = (Model) =>
       return next(new ApiError(`No document for this id ${id}`, 404));
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     // Trigger "remove" event when update document
+=======
+    // trigger 'remove' event when update document
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
 =======
     // trigger 'remove' event when update document
 >>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
@@ -32,7 +36,11 @@ exports.updateOne = (Model) =>
       );
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Trigger "save" event when update document
+=======
+    // trigger 'save' event when update document
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
 =======
     // trigger 'save' event when update document
 >>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
@@ -47,7 +55,11 @@ exports.createOne = (Model) =>
   });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 exports.getOne = (Model, populationOpt) =>
+=======
+  exports.getOne = (Model, populationOpt) =>
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
 =======
   exports.getOne = (Model, populationOpt) =>
 >>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f

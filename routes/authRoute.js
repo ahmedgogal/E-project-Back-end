@@ -1,6 +1,7 @@
 const express = require('express');
 const {
 <<<<<<< HEAD
+<<<<<<< HEAD
   signupValidator,
   loginValidator,
 } = require('../utils/validators/authValidator');
@@ -12,6 +13,8 @@ const {
   verifyPassResetCode,
   resetPassword,
 =======
+=======
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
     signupValidator,
     loginValidator,
 } = require('../utils/validators/authValidator');
@@ -22,6 +25,9 @@ const {
     forgotPassword,
     verifyPassResetCode,
     resetPassword,
+<<<<<<< HEAD
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
+=======
 >>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
 } = require('../services/authService');
 

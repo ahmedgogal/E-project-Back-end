@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs');
 
 const userSchema = new mongoose.Schema(
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
     name: {
       type: String,
@@ -67,6 +68,8 @@ userSchema.pre('save', async function (next) {
   this.password = await bcrypt.hash(this.password, 12);
   next();
 =======
+=======
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
     {
         name: {
             type: String,
@@ -130,6 +133,9 @@ userSchema.pre('save', async function (next) {
     // Hashing user password
     this.password = await bcrypt.hash(this.password, 12);
     next();
+<<<<<<< HEAD
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
+=======
 >>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
 });
 

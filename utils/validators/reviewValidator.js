@@ -6,6 +6,7 @@ exports.createReviewValidator = [
   check('title').optional(),
   check('ratings')
 <<<<<<< HEAD
+<<<<<<< HEAD
     .notEmpty()
     .withMessage('ratings value required')
     .isFloat({ min: 1, max: 5 })
@@ -28,6 +29,8 @@ exports.createReviewValidator = [
       )
     ),
 =======
+=======
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
   .notEmpty()
   .withMessage('ratings value required')
   .isFloat({ min: 1, max: 5 }).withMessage('Ratings value must be between 1 to 5'),
@@ -47,6 +50,9 @@ exports.createReviewValidator = [
       }
     )
   ),
+<<<<<<< HEAD
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
+=======
 >>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
   validatorMiddleware,
 ];

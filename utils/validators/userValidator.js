@@ -6,6 +6,7 @@ const User = require('../../models/userModel');
 
 exports.createUserValidator = [
 <<<<<<< HEAD
+<<<<<<< HEAD
   check('name')
     .notEmpty()
     .withMessage('User required')
@@ -156,6 +157,8 @@ exports.updateLoggedUserValidator = [
 
   validatorMiddleware,
 =======
+=======
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
     check('name')
         .notEmpty()
         .withMessage('User required')
@@ -305,5 +308,8 @@ exports.updateLoggedUserValidator = [
         .withMessage('Invalid phone number only accepted Egy and SA Phone numbers'),
 
     validatorMiddleware,
+<<<<<<< HEAD
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
+=======
 >>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
 ];

@@ -3,6 +3,7 @@ const Product = require('./productModel');
 
 const reviewSchema = new mongoose.Schema(
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
     title: {
       type: String,
@@ -75,6 +76,8 @@ reviewSchema.post('remove', async function () {
 
 module.exports = mongoose.model('Review', reviewSchema);
 =======
+=======
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
     {
       title: {
         type: String,
@@ -146,5 +149,9 @@ module.exports = mongoose.model('Review', reviewSchema);
   });
   
 
+<<<<<<< HEAD
+  module.exports = mongoose.model('Review', reviewSchema);
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
+=======
   module.exports = mongoose.model('Review', reviewSchema);
 >>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f

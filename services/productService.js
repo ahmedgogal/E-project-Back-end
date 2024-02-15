@@ -8,6 +8,7 @@ const Product = require('../models/productModel');
 
 exports.uploadProductImages = uploadMixOfImages([
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
     name: 'imageCover',
     maxCount: 1,
@@ -54,6 +55,8 @@ exports.resizeProductImages = asyncHandler(async (req, res, next) => {
     next();
   }
 =======
+=======
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
     {
         name: 'imageCover',
         maxCount: 1,
@@ -99,6 +102,9 @@ exports.resizeProductImages = asyncHandler(async (req, res, next) => {
 
         next();
     }
+<<<<<<< HEAD
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
+=======
 >>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
 });
 
