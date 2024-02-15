@@ -2,11 +2,9 @@
   "separators.enabledSymbols": [
     "Classes",
     "Enums",
-    "Functions",
     "Interfaces",
-    "Methods",
     "Namespaces",
     "Structs"
   ],
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "cSpell.words": ["uuidv"]
 }

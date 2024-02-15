@@ -23,6 +23,10 @@ const router = express.Router();
 // POST   /products/jkshjhsdjh2332n/reviews
 // GET    /products/jkshjhsdjh2332n/reviews
 // GET    /products/jkshjhsdjh2332n/reviews/87487sfww3
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
 router.use('/:productId/reviews', reviewsRoute);
 
 router

@@ -5,6 +5,7 @@ const Review = require('../../models/reviewModel');
 exports.createReviewValidator = [
   check('title').optional(),
   check('ratings')
+<<<<<<< HEAD
     .notEmpty()
     .withMessage('ratings value required')
     .isFloat({ min: 1, max: 5 })
@@ -26,6 +27,27 @@ exports.createReviewValidator = [
         }
       )
     ),
+=======
+  .notEmpty()
+  .withMessage('ratings value required')
+  .isFloat({ min: 1, max: 5 }).withMessage('Ratings value must be between 1 to 5'),
+  check('user').isMongoId().withMessage('Invalid Review id format'),
+  check('product')
+    .isMongoId()
+    .withMessage('Invalid Review id format')    .custom((val, { req }) =>
+    // Check if logged user create review before
+    Review.findOne({ user: req.user._id, product: req.body.product }).then(
+      (review) => {
+        console.log(review);
+        if (review) {
+          return Promise.reject(
+            new Error('You already created a review before')
+          );
+        }
+      }
+    )
+  ),
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
   validatorMiddleware,
 ];
 

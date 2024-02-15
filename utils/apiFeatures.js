@@ -45,7 +45,11 @@ class ApiFeatures {
           { title: { $regex: this.queryString.keyword, $options: 'i' } },
           { description: { $regex: this.queryString.keyword, $options: 'i' } },
         ];
+<<<<<<< HEAD
       } else  {
+=======
+      } else {
+>>>>>>> 7bff9f307dc8d7f4c3f2a7c28ec3e1790008488f
         query = { name: { $regex: this.queryString.keyword, $options: 'i' } };
       }
 
