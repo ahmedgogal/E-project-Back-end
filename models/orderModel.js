@@ -68,4 +68,3 @@ orderSchema.pre(/^find/, function (next) {
 });
 
 module.exports = mongoose.model('Order', orderSchema);
-
