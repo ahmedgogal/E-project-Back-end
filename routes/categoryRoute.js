@@ -17,16 +17,21 @@ const {
   resizeImage,
 } = require('../services/categoryService');
 
+const authService = require('../services/authService');
+
 const subcategoriesRoute = require('./subCategoryRoute');
 
 const router = express.Router();
 
+// Nested route
 router.use('/:categoryId/subcategories', subcategoriesRoute);
 
 router
   .route('/')
   .get(getCategories)
   .post(
+    authService.protect,
+    authService.allowedTo('admin', 'manager'),
     uploadCategoryImage,
     resizeImage,
     createCategoryValidator,
@@ -36,11 +41,18 @@ router
   .route('/:id')
   .get(getCategoryValidator, getCategory)
   .put(
+    authService.protect,
+    authService.allowedTo('admin', 'manager'),
     uploadCategoryImage,
     resizeImage,
     updateCategoryValidator,
     updateCategory
   )
-  .delete(deleteCategoryValidator, deleteCategory);
+  .delete(
+    authService.protect,
+    authService.allowedTo('admin'),
+    deleteCategoryValidator,
+    deleteCategory
+  );
 
 module.exports = router;
